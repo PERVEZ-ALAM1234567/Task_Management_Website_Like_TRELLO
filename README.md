@@ -1,4 +1,4 @@
-# 🚀 Task Management Kanban style Website like Trello
+# 🚀 Task Management Kanban Style Website Like Trello
 
 Welcome to our **Task Management Kanban Website**! A cutting-edge platform designed to manage tasks in a visually engaging, Kanban-style interface. Whether you're a solo user or part of a team, this platform is your go-to solution for staying organized and productive.
 
