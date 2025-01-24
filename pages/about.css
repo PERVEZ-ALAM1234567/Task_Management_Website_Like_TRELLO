@@ -1,0 +1,193 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding-top: 40px;
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    background-size: 300% 300%;
+    animation: gradientAnimation 4s ease infinite;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 3D gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    background: linear-gradient(120deg, #8e44ad, #3498db);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps the navbar above other content */
+}
+
+header .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 5px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: aqua;
+    background-color: rgba(148, 247, 165, 0.2);
+    transform: translateY(-5px);
+}
+
+.navbar ul li a:active {
+    transform: translateY(2px);
+}
+
+.toggle-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Moves the toggle button to the right */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .navbar.active ul {
+        max-height: 300px; /* Adjust as needed for menu height */
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 100px;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+section {
+    margin-top: 60px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+    color: whitesmoke;
+    background-color: black;
+}
+
+h3:hover {
+    background-color: black;
+}
+
+h3 {
+    padding-top: 0px; /* Adjust for fixed navbar overlap */
+    color: #ff0000bb;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 10px 0;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px 20px 0 20px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 480px) {
+
+    footer {
+        padding: 10px;
+    }
+}
+
+
+

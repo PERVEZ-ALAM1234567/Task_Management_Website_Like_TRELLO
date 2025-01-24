@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- HEADER STARTS HERE -->
+    <header>
+        <div class="logo"><i class="fas fa-tasks"></i> TASK MANAGEMENT</div>
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </nav>
+    </header> <!-- HEADER ENDS HERE -->
+
+    <section id="first_section">
+        <h3>About Us</h3>
+        <p>Our platform is designed to empower individuals and teams to organize, collaborate, and achieve their goals with efficiency and simplicity. Inspired by the innovative features of tools like Trello, we aim to bring flexibility and creativity to every user’s workflow.</p>
+    </section>
+    
+    <section>
+        <h3>Our Mission</h3>
+        <p>To provide a seamless and user-friendly experience that helps people stay organized, focused, and productive. We are committed to fostering collaboration and enabling users to turn their ideas into reality.</p>
+    </section>
+    
+    <section>
+        <h3>What We Offer</h3>
+        <p>From task management to collaborative planning, our platform offers a wide range of features tailored to meet the needs of students, professionals, and organizations. Explore customizable workflows, real-time collaboration tools, and an intuitive interface designed for everyone.</p>
+    </section>
+    
+    <section>
+        <h3>Why Choose Us?</h3>
+        <p>Our focus is on creating a modern, feature-rich, and highly responsive platform that adapts to your unique requirements. We prioritize user satisfaction, innovation, and continuous improvement to ensure you achieve your goals effortlessly.</p>
+    </section>    
+
+    <!-- FOOTER STARTS HERE -->
+  <footer>
+    <p>&copy; ALL RIGHTS ARE RESERVED, TASK MANAGEMENT PLATFORM KANBAN STYLE</p>
+  </footer> <!-- FOOTER ENDS HERE -->
+
+    <script>
+        function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVIVES</title>
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- HEADER STARTS HERE -->
+    <header>
+        <div class="logo"><i class="fas fa-tasks"></i> TASK MANAGEMENT</div>
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </nav>
+    </header> <!-- HEADER ENDS HERE -->
+    <section>
+        <h3>Our Services</h3>
+        <div class="service-item">
+            <h4>Custom Workflow Design</h4>
+            <p>We specialize in creating workflows tailored to meet your specific needs. Whether you are a small team or a large organization, our solutions are designed to optimize your processes and increase efficiency.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Real-Time Collaboration</h4>
+            <p>Enable seamless collaboration among team members with our real-time tools. Share updates, assign tasks, and track progress in one centralized location.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Performance Analytics</h4>
+            <p>Gain actionable insights into your performance. Our analytics tools help you monitor productivity, identify bottlenecks, and make data-driven decisions to enhance outcomes.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Secure Data Management</h4>
+            <p>Protect your sensitive data with our robust security measures. We use advanced encryption techniques to ensure that your information remains safe and secure.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Task Automation</h4>
+            <p>Save time and effort by automating repetitive tasks. Our automation features help you focus on what truly matters, reducing manual work and increasing efficiency.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Custom Integrations</h4>
+            <p>Connect our platform with your existing tools and systems. Our integration services ensure a smooth and seamless experience, making your workflows even more powerful.</p>
+        </div>
+    
+        <div class="service-item">
+            <h4>Dedicated Support</h4>
+            <p>Our support team is here to assist you every step of the way. From onboarding to troubleshooting, we’re committed to ensuring your success.</p>
+        </div>
+    </section>
+    
+
+    <!-- FOOTER STARTS HERE -->
+  <footer>
+    <p>&copy; ALL RIGHTS ARE RESERVED, TASK MANAGEMENT PLATFORM KANBAN STYLE</p>
+  </footer> <!-- FOOTER ENDS HERE -->
+    <script>
+        function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
