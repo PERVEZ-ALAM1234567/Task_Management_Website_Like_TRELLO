@@ -36,13 +36,27 @@ Welcome to our **Task Management Kanban Website**! A cutting-edge platform desig
 
 ## 📸 Screenshots
 
-*Example of the Kanban board layout.*
+**Example of the Kanban board layout.**
+
 ![SC24C8~1](https://github.com/user-attachments/assets/b5919f8f-c247-41ea-9830-3e4433343b42)
 
+**Managing tasks with deadlines and priorities.**
 
+**Adding Task**
 
-![Task Management](./images/task-management-screenshot.png)  
-*Managing tasks with deadlines and priorities.*
+![SCREEN~1](https://github.com/user-attachments/assets/242cafee-0983-453e-aac6-80cccf3bd52b)
+
+**Task in TO DO list**
+
+![SCREEN~4](https://github.com/user-attachments/assets/2995183f-d09d-479b-bf7a-607989362527)
+
+**Task is IN PROGRESS list**
+
+![SCREEN~3](https://github.com/user-attachments/assets/f00e0136-d7a2-45aa-9bfd-d2eed4b1795b)
+
+**Task DONE**
+
+![SCREEN~2](https://github.com/user-attachments/assets/bdb03ec0-1140-4a94-810a-b578c584c426)
 
 ---
 
@@ -117,4 +131,3 @@ This **Task Management Kanban Website** offers an intuitive, modern, and engagin
 Feel free to contribute, suggest new features, or report any issues by creating an issue or a pull request.
 
 Happy task managing! 🚀
-
