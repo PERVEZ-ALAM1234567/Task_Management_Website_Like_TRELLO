@@ -1,0 +1,553 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Animation */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, #8e44ad, #3498db);
+  background-size: 300% 300%;
+  color: #333;
+  height: 100%;
+  animation: parallaxBackground 2s ease infinite; /* Smooth parallax effect */
+  min-height: 100vh; /* Ensure the body can grow if content overflows */
+}
+
+@keyframes parallaxBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: auto;
+  background: linear-gradient(120deg, #8e44ad, #3498db);
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  animation: glowEffect 3s ease-in-out infinite alternate; /* Adds glowing animation */
+}
+
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 111, 97, 0.8);
+  }
+  100% {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 154, 68, 0.8);
+  }
+}
+
+header .logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative; /* Ensures submenu is positioned relative to its parent */
+  margin: 5px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: aqua;
+  background-color: rgba(148, 247, 165, 0.4);
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 1px 10px 20px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toggle-btn span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    text-align: left;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+}
+
+/* Log In Button */
+#log-in-btn {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #4767f3;
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#log-in-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, #00ff37, #58928d);
+}
+
+/* Sign Up Button */
+#sign-up-btn {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #4767f3;
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#sign-up-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, #00ff37, #58928d);
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  #log-in-btn,
+  #sign-up-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #log-in-btn,
+  #sign-up-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  #log-in-btn {
+    right: 1px;
+    top: 160px;
+  }
+  #sign-up-btn {
+    top: 110px;
+    right: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  #log-in-btn,
+  #sign-up-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  #log-in-btn {
+    top: 60px;
+    right: 10px;
+  }
+  #sign-up-btn {
+    right: 10px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  #log-in-btn,
+  #sign-up-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  #log-in-btn {
+    top: 90px;
+    right: 5px;
+  }
+  #sign-up-btn {
+    top: 120px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  #log-in-btn,
+  #sign-up-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  #log-in-btn {
+    top: 90px;
+    right: 5px;
+  }
+  #sign-up-btn {
+    top: 120px;
+    right: 5px;
+  }
+}
+
+/* Kanban Board */
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  max-width: 100%;
+}
+
+/* Kanban Columns */
+.kanban-column {
+  width: 300px;
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  border-radius: 12px;
+  padding: 15px;
+  padding-bottom: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 450px;
+  overflow: hidden;
+}
+
+.kanban-column:hover {
+  transform: translateY(-30px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+.kanban-item:not(:empty) {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 5px;
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+.kanban-items {
+  margin-top: 15px;
+  height: calc(100% - 40px); /* Ensure it adapts to column height */
+  max-height: 550px; /* Adjust scrolling container */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  /* overflow-x: scroll; Enable HORIZONTAL scrolling */
+}
+
+#todo-items :hover {
+  cursor: grabbing;
+}
+
+#inprogress-items :hover {
+  cursor: grabbing;
+}
+#inprogress-items {
+  border: 1px solid black;
+}
+#done-items :hover {
+  cursor: grabbing;
+}
+
+/* Add Task Button */
+.add-task-btn {
+  max-width: 30%;
+  background: linear-gradient(145deg, #ff7eb3, #ff758c);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+  margin: 30px;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.add-task-btn:hover {
+  background: linear-gradient(145deg, #b67b8a, #ff002f);
+  transform: scale(1.4);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative; /* Ensure the close button is positioned relative to this container */
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6a11cb;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.9);
+}
+
+button[type="button"] {
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button[type="button"]:hover {
+  background: linear-gradient(145deg, #5a0ebb, #1e5efb);
+  transform: scale(1.1);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+.delete-btn {
+  background-color: #cc5757;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: default;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+  cursor: default;
+}
+
+#feedback-btn {
+  margin-left: auto; /* Automatically moves the button to the right */
+  display: block; /* Make it a block element to use margin-left: auto */
+  padding: 10px 60px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #4767f3;
+  cursor: pointer;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Centers the text inside the button */
+}
+
+#feedback-btn:hover {
+  transform: translateY(-7px); /* Smooth upward movement */
+  box-shadow: 0 60px 100px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+  background: linear-gradient(45deg, #ad386f, #ff0000); /* Reverse gradient */
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: whitesmoke;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+/* Responsive Styles for Specific Breakpoints */
+@media screen and (max-width: 768px) {
+  .kanban-board {
+    margin: 30px;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+
+  .kanban-column {
+    width: 100%;
+  }
+
+  .add-task-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  #feedback-btn {
+    padding: 12px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .kanban-board {
+    gap: 15px;
+    margin: 70px;
+  }
+
+  .add-task-btn {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  #feedback-btn {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .kanban-column {
+    padding: 10px;
+  }
+
+  .kanban-board {
+    gap: 15px;
+    margin: 70px;
+  }
+  .add-task-btn {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
+  #feedback-btn {
+    padding: 8px;
+    font-size: 15px;
+  }
+}

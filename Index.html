@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASK MANAGEMENT KANBAN STYLE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER STARTS HERE -->
+  <header>
+    <div class="logo">
+      <i class="fas fa-tasks"></i> TASK MANAGEMENT
+    </div>
+    <button class="toggle-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="pages/about.html">About us</a></li>
+        <li><a href="pages/service.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header> <!-- HEADER ENDS HERE -->
+
+  <!-- LOG IN BUTTON -->
+  <button id="log-in-btn" onclick="location.href='pages/log-in.html';"> <i class="fas fa-sign-in-alt"></i> LOG IN</button>
+
+  <!-- SIGN UP BUTTON -->
+  <button id="sign-up-btn" onclick="location.href='pages/sign-up.html';"> <i class="fas fa-user-plus"></i> SIGN UP</button>
+
+  <!-- KANBAN BOARD STARTS HERE -->
+
+  <div class="kanban-board">
+    <div class="kanban-column" id="todo">
+      <h2><i class="fas fa-clipboard-list"></i> To Do</h2>
+      <div class="kanban-items" id="todo-items">
+        <div class="kanban-item"></div>
+      </div>
+    </div>
+    <div class="kanban-column" id="inprogress">
+      <h2> <i class="fas fa-spinner"></i> In Progress</h2>
+      <div class="kanban-items" id="inprogress-items">
+        <div class="kanban-item"></div>
+      </div>
+    </div>
+    <div class="kanban-column" id="done">
+      <h2><i class="fas fa-check-circle"></i> Done</h2>
+      <div class="kanban-items" id="done-items">
+        <div class="kanban-item"></div>
+      </div>
+    </div>
+  </div>
+  <button class="add-task-btn" onclick="openModal()"><i class="fas fa-plus"></i>  Add Task</button> <!-- Single Add Task Button -->
+
+  <!-- Add Task Modal -->
+  <div id="addTaskModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()"><i class="fas fa-times"></i> </span>
+      <h2>Add New Task</h2>
+      <form id="taskForm" method="POST" action="add_task.php">
+        <label for="taskTitle">Task Title:</label>
+        <!-- <input type="text" id="taskTitle" name="taskTitle" required> -->
+        <textarea name="" id="taskTitle" name="taskTitle" required></textarea>
+
+        <label for="taskColumn">Column:</label>
+        <select id="taskColumn" name="taskColumn">
+          <option value="todo-items">To Do</option>
+          <option value="inprogress-items">In Progress</option>
+          <option value="done-items">Done</option>
+        </select>
+
+        <button type="button" onclick="addTask()">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FEEDBACK BUTTON -->
+  <button id="feedback-btn" onclick="location.href='pages/feedback.html';"><i class="fas fa-comment-dots"></i> FEEDBACK</button>
+
+ <!-- FOOTER STARTS HERE -->
+ <footer>
+  <p>&copy; <span id="year"></span> All Rights Reserved | Task Management Platform Kanban Style</p>
+</footer>
+<!-- FOOTER ENDS HERE -->
+
+  <script src="script.js"></script>
+  <script>
+    // -------HAMBURGER TOGGLE MENU-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
